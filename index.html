@@ -2,16 +2,11 @@
 <html lang="en">
 
 <head>
-  <title>RD Final-Project</title>
+  <title>Ecstallery</title>
 
   <!-- Required Meta tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Bootstrap 3 CDN -->
-  <!-- Latest compiled and minified CSS -->
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
 
   <!-- My own StyleSheet -->
   <link rel="stylesheet" href="css/styles.css">
@@ -20,10 +15,12 @@
 </head>
 
 <body>
-
+  <div id="bg"></div>
   <header class="primary-header">
-    <div id="bg-head"></div>
-    <a href="index.html" id="logo" tabindex="0">Ecstallery</a>
+    <div class="logo-container">
+      <a href="index.html" id="logo" tabindex="0">Ecstallery</a>
+      <div class="circle"></div>
+    </div>
 
     <nav id="primary-nav">
       <ul>
@@ -41,31 +38,36 @@
     <button class="btn btn-primary btns-1" id="relapseMsg" onclick="changeBack(welcome, this, photoGalleryMsg);"> Click
       to View the Welcome Greetings again </button>
 
-    <!-- Content -->
-    <section id="welcome" tabindex="4">
-      <div id="welcome-head">
-        <aside class="head-img">
-          <div class="grad"></div>
-        </aside>
-        <div id="welcome-header">
-          <header id="welcome-greetings">
-            <h1 class="welcome-header-logo">Ecstatic Gallery</h1>
-            <h2>Welcomes you</h2>
-            <h3>We hope you very much enjoy your stay!</h3>
-          </header>
+    <!-- Welcome card container -->
+    <div class="welcome-card-container">
+      <!-- Content -->
+      <section id="welcome" tabindex="4">
+        <div id="welcome-head">
+          <aside class="head-img">
+            <div class="grad"></div>
+          </aside>
+          <div id="welcome-header">
+            <header id="welcome-greetings">
+              <h1 class="welcome-header-logo">Ecstatic Gallery</h1>
+              <h2>Welcomes you</h2>
+              <h3>We hope you very much enjoy your stay!</h3>
+            </header>
 
-          <div id="welcome-paras">
-            <p>Its our immense pleasure to showcase our beautiful and very engrossing pictures, that our members of the
-              <span class="welcome-header-logo">Ecstatic Gallery</span> have painted or captured.</p>
-            <p>Not to worry, we also have a few of the featured pictures which were not taken or painted by any of our
-              members but shared to us by our very generous visitors, just like you.</p>
-            <small class="collapse-btn" onclick="change(welcome, relapseMsg, photoGalleryMsg);">
+            <div id="welcome-paras">
+              <p>Its our immense pleasure to showcase our beautiful and very engrossing pictures, that our members of
+                the
+                <span class="welcome-header-logo">Ecstatic Gallery</span> have painted or captured.</p>
+              <p>Not to worry, we also have a few of the featured pictures which were not taken or painted by any of our
+                members but shared to us by our very generous visitors, just like you.
+              </p>
+            </div>
+            <button class="collapse-btn" onclick="change(welcome, relapseMsg, photoGalleryMsg);">
               Click to collapse
-            </small>
+            </button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <section id="photoGallery">
       <div class="btn-go-back">
