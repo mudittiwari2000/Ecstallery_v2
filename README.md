@@ -1,5 +1,6 @@
 # ECSTALLERY VERSION 2
-<hr>
+<hr/>
+
 ## Ecstatic Image Gallery redesigned
 
 <ol>
