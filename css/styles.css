@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:200,300,regular,500,600,700,800,900);
-@import url(https://fonts.googleapis.com/css?family=Fugaz+One:regular);
-* *::after,
+@import url(https://fonts.googleapis.com/css?family=Nanum+Gothic:regular,700,800);
+*,
+*::after,
 *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -13,13 +14,10 @@
   outline: none;
 }
 
-html {
-  height: 100%;
+body {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-}
-
-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,11 +78,11 @@ header #logo {
   text-decoration: none;
   letter-spacing: .1em;
   word-spacing: .3em;
-  -webkit-transition: -webkit-transform 250ms ease-out .1s opacity 200ms ease-out .1s;
-  transition: -webkit-transform 250ms ease-out .1s opacity 200ms ease-out .1s;
-  transition: transform 250ms ease-out .1s opacity 200ms ease-out .1s;
-  transition: transform 250ms ease-out .1s opacity 200ms ease-out .1s, -webkit-transform 250ms ease-out .1s opacity 200ms ease-out .1s;
-  font-family: Fugaz One;
+  -webkit-transition: -webkit-transform 250ms ease-out .1s opacity 200ms ease-out .1s;
+  transition: -webkit-transform 250ms ease-out .1s opacity 200ms ease-out .1s;
+  transition: transform 250ms ease-out .1s opacity 200ms ease-out .1s;
+  transition: transform 250ms ease-out .1s opacity 200ms ease-out .1s, -webkit-transform 250ms ease-out .1s opacity 200ms ease-out .1s;
+  font-family: "Nanum Gothic";
 }
 
 @media (min-width: 840px) {
@@ -240,26 +238,32 @@ main #welcome {
   padding: 1em;
   padding-bottom: 0;
   color: white;
-  text-shadow: 3px 3px 2px #232C33;
-  background-color: white;
-  background-image: url(https://images.unsplash.com/photo-1581699461793-bec4b43073b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+  background-color: #000000;
+  background-image: linear-gradient(47deg, rgba(39, 38, 38, 0.7) 0%, rgba(44, 62, 80, 0.6) 74%);
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-transition: all .3s ease-out .1s;
   transition: all .3s ease-out .1s;
-  opacity: .9;
   position: relative;
 }
 
 @media (min-width: 840px) {
   main #welcome {
-    background-image: url("");
-    background-color: #56876d7c;
+    background-color: #deebdd;
+    background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
     color: #232C33;
     text-shadow: none;
     padding: 0;
     margin: 0;
   }
+}
+
+main #welcome:hover, main #welcome:focus {
+  -webkit-transform: translate3d(0, -3px, -2px);
+          transform: translate3d(0, -3px, -2px);
+  -webkit-box-shadow: 0 5px 20px rgba(35, 44, 51, 0.6);
+          box-shadow: 0 5px 20px rgba(35, 44, 51, 0.6);
+  background-image: linear-gradient(45deg, rgba(39, 38, 38, 0.5) 0%, rgba(44, 62, 80, 0.4) 74%);
 }
 
 @media (min-width: 840px) {
@@ -274,37 +278,31 @@ main #welcome {
   }
 }
 
-main #welcome-head aside {
+main #welcome-head .head-img {
+  background-color: #f9ea8f;
   background-image: url(https://images.unsplash.com/photo-1581699461793-bec4b43073b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
   background-repeat: no-repeat;
   background-size: cover;
   display: none;
+  border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  z-index: 0;
 }
 
 @media (min-width: 840px) {
-  main #welcome-head aside {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 600px;
-    height: 400px;
-    border: 1px dotted #56876D;
+  main #welcome-head .head-img {
+    display: block;
+    min-width: 400px;
+    min-height: 100%;
     border-right: 5px solid #12695F;
   }
 }
 
-main #welcome-head .welcome-header-logo {
-  color: #63e4d5;
-  font-weight: 500;
-}
-
-@media (min-width: 840px) {
-  main #welcome-head .welcome-header-logo {
-    color: black;
-  }
+main #welcome-head .head-img .grad {
+  background-image: linear-gradient(315deg, rgba(249, 234, 143, 0.3) 0%, rgba(177, 241, 219, 0.3) 74%);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 main #welcome-head #welcome-header {
@@ -349,13 +347,42 @@ main #welcome-head #welcome-header #welcome-greetings {
           flex: 1 0;
 }
 
-main #welcome-head #welcome-header #welcome-greetings h1 {
-  font-size: 3.5rem;
+main #welcome-head #welcome-header #welcome-greetings .welcome-header-logo {
+  color: #12695F;
+  font-weight: 600;
+  font-size: 4rem;
+  margin: .8em auto .5em;
+  position: relative;
+}
+
+@media (min-width: 840px) {
+  main #welcome-head #welcome-header #welcome-greetings .welcome-header-logo {
+    color: black;
+  }
+}
+
+main #welcome-head #welcome-header #welcome-greetings .welcome-header-logo::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60%;
+  height: 5px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(180, 180, 180, 0.6)), to(transparent));
+  background-image: linear-gradient(to right, rgba(180, 180, 180, 0.6), transparent);
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+main #welcome-head #welcome-header #welcome-greetings h2 {
+  font-size: 3rem;
+  font-weight: 400;
 }
 
 main #welcome-head #welcome-header #welcome-greetings h3 {
   font-size: 2rem;
-  margin-top: .5em;
+  font-weight: 500;
+  margin: .2em auto .6em;
 }
 
 main #welcome-head #welcome-header #welcome-paras {

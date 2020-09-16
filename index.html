@@ -2,111 +2,138 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RD Final-Project</title>
+  <title>RD Final-Project</title>
 
-    <!-- Bootstrap 3 CDN -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <!-- Required Meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- My own StyleSheet -->
-    <link rel="stylesheet" href="css/styles.css">
+  <!-- Bootstrap 3 CDN -->
+  <!-- Latest compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+
+  <!-- My own StyleSheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- My own JavaScript -->
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
-    <header class="primary-header">
-        <div id="bg-head"></div>
-        <a href="index.html" id="logo" tabindex="0">Ecstatic Gallery</a>
+  <header class="primary-header">
+    <div id="bg-head"></div>
+    <a href="index.html" id="logo" tabindex="0">Ecstallery</a>
 
-        <nav id="primary-nav">
-            <ul>
-                <li> <a href="index.html" title="Home" tabindex="1">Home</a></li>
-                <li> <a href="#" tabindex="2">About us</a></li>
-                <li> <a href="#" tabindex="3">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav id="primary-nav">
+      <ul>
+        <li> <a href="index.html" title="Home" tabindex="1">Home</a></li>
+        <li> <a href="#" tabindex="2">About us</a></li>
+        <li> <a href="#" tabindex="3">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main id="main-content">
-        <button class="btn btn-primary btns-1" id="photoGalleryMsg" onclick="photoGalleryFunc(photoGallery, photoGalleryMsg, relapseMsg);"> Click to View the Photo Gallery</button>
-        <button class="btn btn-primary btns-1" id="relapseMsg" onclick="changeBack(welcome, this, photoGalleryMsg);"> Click to View the Welcome Greetings again </button>
-        <section id="welcome" tabindex="4">
-            <div id="welcome-head">
-                <aside>
-                </aside>
-                <div id="welcome-header">
-                    <header id="welcome-greetings">
-                        <h1>Welcome to <span class="welcome-header-logo">Ecstatic Gallery</span></h1>
-                        <h3 class="lead">We hope you very much enjoy your stay!</h3>
-                    </header>
-        
-                    <div id="welcome-paras">
-                        <p>Its our immense pleasure to showcase our beautiful and very engrossing pictures, that our members of the <span class="welcome-header-logo">Ecstatic Gallery</span> have painted or captured.</p>
-                        <p>Not to worry, we also have a few of the featured pictures which were not taken or painted by any of our members but shared to us by our very generous visitors, just like you.</p>
-                        <small class="text-muted collapse-btn" onclick="change(welcome, relapseMsg, photoGalleryMsg);">
-                        Click to collapse
-                        </small>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <main id="main-content">
+    <!-- Buttons -->
+    <button class="btn btn-primary btns-1" id="photoGalleryMsg"
+      onclick="photoGalleryFunc(photoGallery, photoGalleryMsg, relapseMsg);"> Click to View the Photo Gallery</button>
+    <button class="btn btn-primary btns-1" id="relapseMsg" onclick="changeBack(welcome, this, photoGalleryMsg);"> Click
+      to View the Welcome Greetings again </button>
 
-        <section id="photoGallery">
-            <div class="btn-go-back">
-                <button class="btn btn-primary" id="go-back-btn" onclick="photoGalleryFunc(welcome, this, photoGallery);"> <span class="glyphicon glyphicon-chevron-left"></span> Go Back</button>
-            </div>
-            <h1 id="showcase-head" tabindex="5">Showcase</h1>
-            <div class="img-grid">
-                <div class="card card-1" tabindex="6"> 
-                    <img src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Graffiti by Timon Klauser" title="Graffiti by Timon Klauser" class="imgs img1">
-                </div>
-                <div class="card card-2" tabindex="7">
-                    <img src="https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Art by Gustavo Centurion" title="Art by Gustavo Centurion" class="imgs img2">
-                </div>
-                <div class="card card-3" tabindex="8">
-                    <img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Art by Steve Johnson" title="Art by Steve Johnson" class="imgs img3">
-                </div>
-                <div class="card card-4" tabindex="9">
-                    <img src="https://images.unsplash.com/photo-1541367777708-7905fe3296c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Art by Steve Johnson" title="Art by Steve Johnson" class="imgs img4">
-                </div>
-                <div class="card card-5" tabindex="10">
-                    <img src="https://images.unsplash.com/photo-1556850003-5adb86031c6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Art by Laurianne Huggins" title="Art by Laurianne Huggins" class="imgs img5">
-                </div>
-                <div class="card card-6" tabindex="11">
-                    <img src="https://images.unsplash.com/photo-1511424443513-a00662140eeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Graffiti by Sunyu" title="Graffiti by Sunyu" class="imgs img6">
-                </div>
-                <div class="card card-7" tabindex="12">
-                    <img src="https://images.unsplash.com/photo-1548969098-1f184e8a5b04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Picture taken by Edgar Chaparro" title="Picture taken by Edgar Chaparro" class="imgs img7">
-                </div>
-            </div>
-            <div class="btn-go-back">
-                <button class="btn btn-primary" id="go-back-btn" onclick="photoGalleryFunc(welcome, this, photoGallery);"> <span class="glyphicon glyphicon-chevron-left"></span> Go Back</button>
-            </div>
-        </section>
-    </main>
+    <!-- Content -->
+    <section id="welcome" tabindex="4">
+      <div id="welcome-head">
+        <aside class="head-img">
+          <div class="grad"></div>
+        </aside>
+        <div id="welcome-header">
+          <header id="welcome-greetings">
+            <h1 class="welcome-header-logo">Ecstatic Gallery</h1>
+            <h2>Welcomes you</h2>
+            <h3>We hope you very much enjoy your stay!</h3>
+          </header>
 
-    <footer id="primary-footer"> 
-        <h2 class="cpr">
-            <span class="cpr-logo glyphicon glyphicon-copyright-mark"></span>
-            <p class="lead">Ecstatic Gallery 2020</p>  
-        </h2>
-        <a href="#" class="sup">Support </a>
-        <a href="#" class="help">Help </a>
-    </footer>
+          <div id="welcome-paras">
+            <p>Its our immense pleasure to showcase our beautiful and very engrossing pictures, that our members of the
+              <span class="welcome-header-logo">Ecstatic Gallery</span> have painted or captured.</p>
+            <p>Not to worry, we also have a few of the featured pictures which were not taken or painted by any of our
+              members but shared to us by our very generous visitors, just like you.</p>
+            <small class="collapse-btn" onclick="change(welcome, relapseMsg, photoGalleryMsg);">
+              Click to collapse
+            </small>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- My own JavaScript -->
-    <script src="js/script.js"></script>
-    <!-- Bootstrap JS -->
-    <!-- Jquery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <section id="photoGallery">
+      <div class="btn-go-back">
+        <button class="btn btn-primary" id="go-back-btn" onclick="photoGalleryFunc(welcome, this, photoGallery);"> <span
+            class="glyphicon glyphicon-chevron-left"></span> Go Back</button>
+      </div>
+      <h1 id="showcase-head" tabindex="5">Showcase</h1>
+      <div class="img-grid">
+        <div class="card card-1" tabindex="6">
+          <img
+            src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            alt="Graffiti by Timon Klauser" title="Graffiti by Timon Klauser" class="imgs img1">
+        </div>
+        <div class="card card-2" tabindex="7">
+          <img
+            src="https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            alt="Art by Gustavo Centurion" title="Art by Gustavo Centurion" class="imgs img2">
+        </div>
+        <div class="card card-3" tabindex="8">
+          <img
+            src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            alt="Art by Steve Johnson" title="Art by Steve Johnson" class="imgs img3">
+        </div>
+        <div class="card card-4" tabindex="9">
+          <img
+            src="https://images.unsplash.com/photo-1541367777708-7905fe3296c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            alt="Art by Steve Johnson" title="Art by Steve Johnson" class="imgs img4">
+        </div>
+        <div class="card card-5" tabindex="10">
+          <img
+            src="https://images.unsplash.com/photo-1556850003-5adb86031c6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            alt="Art by Laurianne Huggins" title="Art by Laurianne Huggins" class="imgs img5">
+        </div>
+        <div class="card card-6" tabindex="11">
+          <img
+            src="https://images.unsplash.com/photo-1511424443513-a00662140eeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            alt="Graffiti by Sunyu" title="Graffiti by Sunyu" class="imgs img6">
+        </div>
+        <div class="card card-7" tabindex="12">
+          <img
+            src="https://images.unsplash.com/photo-1548969098-1f184e8a5b04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            alt="Picture taken by Edgar Chaparro" title="Picture taken by Edgar Chaparro" class="imgs img7">
+        </div>
+      </div>
+      <div class="btn-go-back">
+        <button class="btn btn-primary" id="go-back-btn" onclick="photoGalleryFunc(welcome, this, photoGallery);"> <span
+            class="glyphicon glyphicon-chevron-left"></span> Go Back</button>
+      </div>
+    </section>
+  </main>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+  <footer id="primary-footer">
+    <h2 class="cpr">
+      <span class="cpr-logo glyphicon glyphicon-copyright-mark"></span>
+      <p class="lead">Ecstatic Gallery 2020</p>
+    </h2>
+    <a href="#" class="sup">Support </a>
+    <a href="#" class="help">Help </a>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <!-- Jquery CDN -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+  <!-- Latest compiled and minified JavaScript -->
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
-    </script>
+    </script> -->
 </body>
 
 </html>
