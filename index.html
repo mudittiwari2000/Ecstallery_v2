@@ -8,8 +8,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Font-awesome-CDN
+  <script src="https://kit.fontawesome.com/9310d6db9c.js" crossorigin="anonymous" defer></script> -->
   <!-- My own StyleSheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/pageOne.css">
+  <link rel="stylesheet" type="text/css" href="css/pageTwo.css">
+  <link rel="stylesheet" type="text/css" href="css/pageThree.css">
   <!-- My own JavaScript -->
   <script src="js/script.js" defer></script>
 </head>
@@ -19,27 +23,35 @@
   <header class="primary-header">
     <div class="logo-container">
       <a href="index.html" id="logo" tabindex="0">Ecstallery</a>
-      <div class="circle"></div>
     </div>
 
     <nav id="primary-nav">
       <ul>
-        <li> <a href="index.html" title="Home" tabindex="1">Home</a></li>
-        <li> <a href="#" tabindex="2">About us</a></li>
-        <li> <a href="#" tabindex="3">Contact</a></li>
+        <li> <a href="index.html" title="Home" tabindex="1" class="active">Home</a></li>
+        <li> <a href="#" title="About" tabindex="2">About us</a></li>
+        <li> <a href="#" title="Contact" tabindex="3">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="hamburger" role="button">
+      <div class="ham-btn">
+        <span class="ham-item ham-top"></span>
+        <span class="ham-item ham-middle"></span>
+        <span class="ham-item ham-bottom"></span>
+      </div>
+    </div>
   </header>
 
   <main id="main-content">
-    <!-- Buttons -->
-    <button class="btn btn-primary btns-1" id="photoGalleryMsg"
-      onclick="photoGalleryFunc(photoGallery, photoGalleryMsg, relapseMsg);"> Click to View the Photo Gallery</button>
-    <button class="btn btn-primary btns-1" id="relapseMsg" onclick="changeBack(welcome, this, photoGalleryMsg);"> Click
-      to View the Welcome Greetings again </button>
+    <div class="page-2">
+      <!-- Buttons -->
+      <button class="btn" id="photoGalleryMsg"
+        onclick="photoGalleryFunc(photoGallery, photoGalleryMsg, relapseMsg);">View the Photo Gallery</button>
+      <button class="btn" id="relapseMsg" onclick="changeBack(welcome, this, photoGalleryMsg);">Go Back!</button>
+    </div>
 
     <!-- Welcome card container -->
-    <div class="welcome-card-container">
+    <div class="welcome-card-container page-1">
       <!-- Content -->
       <section id="welcome" tabindex="4">
         <div id="welcome-head">
@@ -121,21 +133,15 @@
 
   <footer id="primary-footer">
     <h2 class="cpr">
-      <span class="cpr-logo glyphicon glyphicon-copyright-mark"></span>
-      <p class="lead">Ecstatic Gallery 2020</p>
+      <span class="cpr-sign">&copy;</span>Ecstatic Gallery 2020
     </h2>
-    <a href="#" class="sup">Support </a>
-    <a href="#" class="help">Help </a>
+    <nav class="nav-footer">
+      <ul class="nav-footer-list">
+        <li class="nav-footer-list-item"><a href="#" class="sup">Support</a></li>
+        <li class="nav-footer-list-item"><a href="#" class="help">Help</a></li>
+      </ul>
+    </nav>
   </footer>
-
-  <!-- Bootstrap JS -->
-  <!-- Jquery CDN -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-
-  <!-- Latest compiled and minified JavaScript -->
-  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
-    </script> -->
 </body>
 
 </html>
