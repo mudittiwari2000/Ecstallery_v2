@@ -8,12 +8,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font-awesome-CDN
-  <script src="https://kit.fontawesome.com/9310d6db9c.js" crossorigin="anonymous" defer></script> -->
+  <!-- Font-awesome-CDN -->
+  <script src="https://kit.fontawesome.com/9310d6db9c.js" crossorigin="anonymous" defer></script>
   <!-- My own StyleSheet -->
-  <link rel="stylesheet" type="text/css" href="css/pageOne.css">
-  <link rel="stylesheet" type="text/css" href="css/pageTwo.css">
-  <link rel="stylesheet" type="text/css" href="css/pageThree.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <!-- My own JavaScript -->
   <script src="js/script.js" defer></script>
 </head>
@@ -22,14 +20,14 @@
   <div id="bg"></div>
   <header class="primary-header">
     <div class="logo-container">
-      <a href="index.html" id="logo" tabindex="0">Ecstallery</a>
+      <a href="./index.html" id="logo" tabindex="0">Ecstallery</a>
     </div>
 
     <nav id="primary-nav">
       <ul>
-        <li> <a href="index.html" title="Home" tabindex="1" class="active">Home</a></li>
-        <li> <a href="#" title="About" tabindex="2">About us</a></li>
-        <li> <a href="#" title="Contact" tabindex="3">Contact</a></li>
+        <li> <a href="./index.html" title="Home" tabindex="1" class="active home">Home</a></li>
+        <li> <a href="#" title="Gallery" tabindex="2" class="gallery">Gallery</a></li>
+        <li> <a href="#" title="About" tabindex="3" class="about">About us</a></li>
       </ul>
     </nav>
 
@@ -43,15 +41,9 @@
   </header>
 
   <main id="main-content">
-    <div class="page-2">
-      <!-- Buttons -->
-      <button class="btn" id="photoGalleryMsg"
-        onclick="photoGalleryFunc(photoGallery, photoGalleryMsg, relapseMsg);">View the Photo Gallery</button>
-      <button class="btn" id="relapseMsg" onclick="changeBack(welcome, this, photoGalleryMsg);">Go Back!</button>
-    </div>
 
-    <!-- Welcome card container -->
-    <div class="welcome-card-container page-1">
+    <!-- Welcome card container -- Page One-->
+    <div class="welcome-card-container page-1 visible">
       <!-- Content -->
       <section id="welcome" tabindex="4">
         <div id="welcome-head">
@@ -73,7 +65,7 @@
                 members but shared to us by our very generous visitors, just like you.
               </p>
             </div>
-            <button class="collapse-btn" onclick="change(welcome, relapseMsg, photoGalleryMsg);">
+            <button class="collapse-btn">
               Click to collapse
             </button>
           </div>
@@ -81,52 +73,55 @@
       </section>
     </div>
 
-    <section id="photoGallery">
-      <div class="btn-go-back">
-        <button class="btn btn-primary" id="go-back-btn" onclick="photoGalleryFunc(welcome, this, photoGallery);"> <span
-            class="glyphicon glyphicon-chevron-left"></span> Go Back</button>
+    <!-- Buttons Page Two -->
+    <section class="page-2 hidden">
+      <!-- Buttons -->
+      <button class="btn btn-View-Gallery">View the Photo Gallery <span><i class="fas fa-arrow-right"></i></span></button>
+      <button class="btn btn-Go-Back"><span><i class="fas fa-arrow-left"></i></span> Go Back!</button>
+    </section>
+
+    <!-- Page Three -->
+    <section class="photoGallery page-3 hidden" class="page-3">
+
+      <!-- Go Back Button -->
+      <div class="go-back-btn-container">
+        <button class="go-back-btn"> <span><i
+              class="fas fa-arrow-left"></i></span>Back Home</button>
       </div>
-      <h1 id="showcase-head" tabindex="5">Showcase</h1>
+
+      <!-- Image Grid Header -->
+      <h3 class="showcase-head-container" tabindex="5"><span class="showcase-head">Showcase</span></h3>
+
+      <!-- Image Grid -->
       <div class="img-grid">
         <div class="card card-1" tabindex="6">
-          <img
-            src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            alt="Graffiti by Timon Klauser" title="Graffiti by Timon Klauser" class="imgs img1">
+          <div class="overlay"></div>
         </div>
         <div class="card card-2" tabindex="7">
-          <img
-            src="https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt="Art by Gustavo Centurion" title="Art by Gustavo Centurion" class="imgs img2">
+          <div class="overlay"></div>
         </div>
         <div class="card card-3" tabindex="8">
-          <img
-            src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            alt="Art by Steve Johnson" title="Art by Steve Johnson" class="imgs img3">
+          <div class="overlay"></div>
         </div>
         <div class="card card-4" tabindex="9">
-          <img
-            src="https://images.unsplash.com/photo-1541367777708-7905fe3296c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            alt="Art by Steve Johnson" title="Art by Steve Johnson" class="imgs img4">
+          <div class="overlay"></div>
         </div>
         <div class="card card-5" tabindex="10">
-          <img
-            src="https://images.unsplash.com/photo-1556850003-5adb86031c6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            alt="Art by Laurianne Huggins" title="Art by Laurianne Huggins" class="imgs img5">
+          <div class="overlay"></div>
         </div>
         <div class="card card-6" tabindex="11">
-          <img
-            src="https://images.unsplash.com/photo-1511424443513-a00662140eeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            alt="Graffiti by Sunyu" title="Graffiti by Sunyu" class="imgs img6">
+          <div class="overlay"></div>
         </div>
         <div class="card card-7" tabindex="12">
-          <img
-            src="https://images.unsplash.com/photo-1548969098-1f184e8a5b04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            alt="Picture taken by Edgar Chaparro" title="Picture taken by Edgar Chaparro" class="imgs img7">
+          <div class="overlay"></div>
         </div>
       </div>
-      <div class="btn-go-back">
-        <button class="btn btn-primary" id="go-back-btn" onclick="photoGalleryFunc(welcome, this, photoGallery);"> <span
-            class="glyphicon glyphicon-chevron-left"></span> Go Back</button>
+
+      <!-- Go Back Button -->
+      <div class="go-back-btn-container">
+        <button class="go-back-btn">
+          <span><i class="fas fa-arrow-left"></i></span>Back Home
+        </button>
       </div>
     </section>
   </main>
