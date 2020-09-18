@@ -40,7 +40,6 @@ galleryNav.addEventListener('click', e => {
       pageOne.className = pageOne.className.replace('visible', 'hidden');
     }
     pageThree.className = pageThree.className.replace('hidden', 'visible');
-    console.log(galleryNav.className);
     galleryNav.classList.add('active');
     homeNav.classList.remove('active');
   }

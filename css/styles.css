@@ -883,10 +883,10 @@ main #welcome-head #welcome-header .collapse-btn:hover, main #welcome-head #welc
   height: 90%;
   border: 2px solid white;
   z-index: 1;
-  -webkit-transition: -webkit-transform 200ms ease;
-  transition: -webkit-transform 200ms ease;
-  transition: transform 200ms ease;
-  transition: transform 200ms ease, -webkit-transform 200ms ease;
+  -webkit-transition: -webkit-transform 300ms ease-out;
+  transition: -webkit-transform 300ms ease-out;
+  transition: transform 300ms ease-out;
+  transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
 }
 
 .photoGallery .img-grid .card::after {
@@ -901,6 +901,37 @@ main #welcome-head #welcome-header .collapse-btn:hover, main #welcome-head #welc
           transform: scaleY(0);
   border-top-width: 0;
   border-bottom-width: 0;
+}
+
+.photoGallery .img-grid .card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(35, 44, 51, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.photoGallery .img-grid .card .overlay h5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 1.8rem;
+  color: #EBF5EE;
+  width: 80%;
+  margin: 0 0 2.5rem 1.5rem;
 }
 
 .photoGallery .img-grid .card:hover::after {
@@ -920,6 +951,10 @@ main #welcome-head #welcome-header .collapse-btn:hover, main #welcome-head #welc
   width: 100%;
   height: 100%;
   background: rgba(35, 44, 51, 0.6);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .photoGallery .img-grid .card-1 {
@@ -954,7 +989,7 @@ main #welcome-head #welcome-header .collapse-btn:hover, main #welcome-head #welc
 }
 
 .photoGallery .img-grid .card-7 {
-  background: url("https://images.unsplash.com/photo-1569172122301-bc5008bc09c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80") no-repeat center center;
+  background: url("https://images.unsplash.com/photo-1569172122301-bc5008bc09c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat center center;
   background-size: 100% 100%;
 }
 
@@ -968,6 +1003,9 @@ main #welcome-head #welcome-header .collapse-btn:hover, main #welcome-head #welc
         grid-template-rows: repeat(3, minmax(250px, 1fr));
     gap: .5em;
     margin: 1em auto 2em;
+  }
+  .photoGallery .img-grid .card:last-child {
+    margin-bottom: 0;
   }
   .photoGallery .img-grid .card-1 {
     -ms-grid-column: 1;
