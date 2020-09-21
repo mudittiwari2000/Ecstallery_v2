@@ -55,8 +55,10 @@ body {
 }
 
 body #bg {
-  background: linear-gradient(45deg, rgba(30, 45, 47, 0.9) 64%, rgba(106, 133, 151, 0.8));
-  position: absolute;
+  background: linear-gradient(45deg, rgba(30, 45, 47, 0.9) 64%, rgba(35, 44, 51, 0.8)), url("https://images.wallpaperscraft.com/image/minimalism_tomato_red_table_wall_shadow_background_74245_1920x1080.jpg") no-repeat center center;
+  background-size: cover;
+  background-blend-mode: hue;
+  position: fixed;
   z-index: -998;
   height: 100%;
   width: 100%;
@@ -258,7 +260,7 @@ body #bg {
 
 @media (min-width: 840px) {
   .primary-header #primary-nav ul li a {
-    color: black;
+    color: #12695F;
     font-weight: 500;
     -webkit-transition: all 150ms ease-out;
     transition: all 150ms ease-out;
@@ -795,7 +797,7 @@ main #welcome-head #welcome-header .collapse-btn:hover, main #welcome-head #welc
   margin: .2em;
   display: inline-block;
   padding: .1em .2em;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: transparent;
   background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
   background-clip: text;
@@ -804,7 +806,7 @@ main #welcome-head #welcome-header .collapse-btn:hover, main #welcome-head #welc
 
 @media (min-width: 840px) {
   .photoGallery .showcase-head {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 500;
     letter-spacing: .2rem;
   }
@@ -926,12 +928,11 @@ main #welcome-head #welcome-header .collapse-btn:hover, main #welcome-head #welc
 
 .photoGallery .img-grid .card .overlay h5 {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 1.8rem;
+  bottom: 5%;
+  left: 5%;
+  font-size: 1.4rem;
   color: #EBF5EE;
-  width: 80%;
-  margin: 0 0 2.5rem 1.5rem;
+  margin: 0 0 .5em .5em;
 }
 
 .photoGallery .img-grid .card:hover::after {
@@ -993,57 +994,24 @@ main #welcome-head #welcome-header .collapse-btn:hover, main #welcome-head #welc
   background-size: 100% 100%;
 }
 
+.photoGallery .img-grid .card-8 {
+  background: url("https://images.unsplash.com/photo-1503169483-419b860b9208?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat center center;
+  background-size: 100% 100%;
+}
+
 @media (min-width: 840px) {
   .photoGallery .img-grid {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(250px, 1fr))[5];
-        grid-template-columns: repeat(5, minmax(250px, 1fr));
-    -ms-grid-rows: (minmax(250px, 1fr))[3];
-        grid-template-rows: repeat(3, minmax(250px, 1fr));
+    -ms-grid-columns: (minmax(360px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    -ms-grid-rows: (minmax(250px, 1fr))[auto-fill];
+        grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
     gap: .5em;
     margin: 1em auto 2em;
   }
   .photoGallery .img-grid .card:last-child {
     margin-bottom: 0;
-  }
-  .photoGallery .img-grid .card-1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: 1 / 4;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 1 / 3;
-    background: url("https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat center center;
-    background-size: 100% 100%;
-  }
-  .photoGallery .img-grid .card-2 {
-    grid-column: span 2;
-    grid-row: span 1;
-    background: url("https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60") no-repeat center center;
-    background-size: 100% 100%;
-  }
-  .photoGallery .img-grid .card-3 {
-    grid-column: span 2;
-    background: url("https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat center center;
-    background-size: 100% 100%;
-  }
-  .photoGallery .img-grid .card-4 {
-    background: url("https://images.unsplash.com/photo-1541367777708-7905fe3296c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat center center;
-    background-size: 100% 100%;
-  }
-  .photoGallery .img-grid .card-5 {
-    background: url("https://images.unsplash.com/photo-1556850003-5adb86031c6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat center center;
-    background-size: 100% 100%;
-  }
-  .photoGallery .img-grid .card-6 {
-    background: url("https://images.unsplash.com/photo-1511424443513-a00662140eeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat center center;
-    background-size: 100% 100%;
-  }
-  .photoGallery .img-grid .card-7 {
-    grid-column: span 2;
-    background: url("https://images.unsplash.com/photo-1569172122301-bc5008bc09c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80") no-repeat center center;
-    background-size: 100% 100%;
   }
 }
 
